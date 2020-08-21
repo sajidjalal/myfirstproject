@@ -47,6 +47,9 @@ class Sheet extends Admin_Controller {
             // $this->session->set_flashdata('msg', '<div class="alert alert-success text-left">Expense added successfully</div>');
             // redirect('admin/expense/index');
         // }
+        
+        $this->session->set_userdata('top_menu', 'sheet');
+        $this->session->set_userdata('sub_menu', 'sheet/index');
         $expense_result = $this->expense_model->get();
         $data['expenselist'] = $expense_result;
         $expnseHead = $this->expensehead_model->get();
