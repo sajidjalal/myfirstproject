@@ -48,6 +48,7 @@ class Sheet extends Admin_Controller {
             // redirect('admin/expense/index');
         // }
         
+        
         $this->session->set_userdata('top_menu', 'sheet');
         $this->session->set_userdata('sub_menu', 'sheet/index');
         $expense_result = $this->expense_model->get();
